@@ -72,6 +72,7 @@ function deb(){
 
 	 esac
 	 exit 1
+done
 }
 
 function rpm(){
@@ -138,6 +139,7 @@ function rpm(){
 			;;
 	 esac
 	 exit 1
+done
 }
 
 case $lsb_dist in

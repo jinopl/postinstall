@@ -47,11 +47,6 @@ function deb(){
 			echo "Installing PHP"
 			apt install php libapache2-mod-php php-mcrypt php-mysql -y
 			 
-			echo "Installing Phpmyadmin"
-			apt install phpmyadmin -y
-
-			echo "Cofiguring apache to run Phpmyadmin"
-			echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
 			 
 			echo "Restarting Apache Server"
 			service apache2 restart
@@ -120,10 +115,7 @@ function rpm(){
 			sudo yum-config-manager --enable remi-php72
 			sudo yum update
 			sudo yum install php libapache2-mod-php php-mcrypt php-mysql -y
-			 
-			echo "Installing Phpmyadmin"
-			sudo yum install phpmyadmin -y
-
+			
 			echo "Restarting httpd"
 			systemctl restart httpd
 			;;
